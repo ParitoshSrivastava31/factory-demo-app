@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greetings as a Service</title>
+  <meta name="description" content="Greetings as a Service turns any name into a warm hello, one greet() call at a time.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+
+  <!-- HEADER: small text logo and anchor links -->
+  <header class="site-header wrap">
+    <a class="logo" href="#hero">Greetings as a Service</a>
+    <nav class="site-nav" aria-label="Page sections">
+      <a href="#hero">Try it</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#advanced-maths">Maths</a>
+    </nav>
+  </header>
+
+  <main id="top" class="wrap">
+
+    <!-- HERO: headline, one-sentence subhead and the live greeting demo -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Hello, at scale.</h1>
+      <p class="subhead">Greetings as a Service turns any name into a warm, well-formed hello in a single function call.</p>
+      <div class="demo">
+        <label for="name-input">Your name</label>
+        <input id="name-input" name="name" type="text" placeholder="e.g. Ada" autocomplete="off" spellcheck="false">
+        <output id="greeting" class="greeting" for="name-input" aria-live="polite">Hello, world!</output>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS: three short cards -->
+    <section id="how-it-works" class="section" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="cards">
+        <li class="card">
+          <span class="card-num" aria-hidden="true">1</span>
+          <h3>You type a name</h3>
+          <p>Any name, any length. Leave it blank and we will assume you mean the world.</p>
+        </li>
+        <li class="card">
+          <span class="card-num" aria-hidden="true">2</span>
+          <h3>We greet() it</h3>
+          <p>One function, one template string, zero surprises.</p>
+        </li>
+        <li class="card">
+          <span class="card-num" aria-hidden="true">3</span>
+          <h3>Everyone feels welcome</h3>
+          <p>Every visitor gets a friendly hello, without anyone having to ask.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ADVANCED MATHEMATICS: the gentle joke. double() and triple() on a number -->
+    <section id="advanced-maths" class="section" aria-labelledby="maths-title">
+      <aside class="maths">
+        <h2 id="maths-title">Advanced mathematics</h2>
+        <p>Our research team has developed two operations of considerable sophistication. Enter a number to see them in action.</p>
+        <div class="maths-input">
+          <label for="number-input">Number</label>
+          <input id="number-input" name="number" type="number" step="any" value="7">
+        </div>
+        <dl class="maths-results">
+          <div>
+            <dt>double(n)</dt>
+            <dd id="doubled">14</dd>
+          </div>
+          <div>
+            <dt>triple(n)</dt>
+            <dd id="tripled">21</dd>
+          </div>
+        </dl>
+        <p class="fine-print">Results independently verified by a calculator.</p>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: one line -->
+  <footer id="site-footer" class="site-footer wrap">
+    <p>Built and maintained by a software factory. Humans still merge.</p>
+  </footer>
+
+</body>
+</html>
