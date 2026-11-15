@@ -22,6 +22,13 @@ test('index.html has the hero, how-it-works and maths sections by id', () => {
   }
 });
 
+test('index.html includes a fun fact line under the hero subheading', () => {
+  assert.match(
+    html,
+    /<p class="subhead">[\s\S]*?<\/p>\s*<p class="fun-fact">\s*Fun fact: greetings have been served with 100% uptime since this morning\.\s*<\/p>/
+  );
+});
+
 test('index.html loads app.js as a module script', () => {
   assert.match(html, /<script\s+type="module"\s+src="app\.js"\s*><\/script>/);
 });
