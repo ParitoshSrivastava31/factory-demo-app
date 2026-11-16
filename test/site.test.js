@@ -50,17 +50,17 @@ test('app.js never writes HTML with innerHTML', () => {
 });
 
 test('greetingFor trims input and greets the name', () => {
-  assert.strictEqual(greetingFor('Alice'), 'Hello, Alice!');
-  assert.strictEqual(greetingFor('  Bob  '), 'Hello, Bob!');
+  assert.strictEqual(greetingFor('Alice'), 'Welcome, Alice!');
+  assert.strictEqual(greetingFor('  Bob  '), 'Welcome, Bob!');
 });
 
 test('greetingFor falls back to "world" for empty or whitespace-only input', () => {
-  assert.strictEqual(greetingFor(''), 'Hello, world!');
-  assert.strictEqual(greetingFor('   '), 'Hello, world!');
-  assert.strictEqual(greetingFor('\t\n'), 'Hello, world!');
+  assert.strictEqual(greetingFor(''), 'Welcome, world!');
+  assert.strictEqual(greetingFor('   '), 'Welcome, world!');
+  assert.strictEqual(greetingFor('\t\n'), 'Welcome, world!');
 });
 
 test('greetingFor falls back to "world" for non-string input', () => {
-  assert.strictEqual(greetingFor(undefined), 'Hello, world!');
-  assert.strictEqual(greetingFor(null), 'Hello, world!');
+  assert.strictEqual(greetingFor(undefined), 'Welcome, world!');
+  assert.strictEqual(greetingFor(null), 'Welcome, world!');
 });
